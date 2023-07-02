@@ -12,5 +12,16 @@ public class Principal {
         
         JOptionPane.showMessageDialog(null, resp,
                 "Selección", JOptionPane.INFORMATION_MESSAGE);
+        
+        int dineroCambio = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa la cantidad de dinero que deseas convertir:",
+                "", JOptionPane.INFORMATION_MESSAGE));
+        System.out.println("Cantidad de dinero" + dineroCambio);
+        
+        Object[] possibleValues = { "First", "Second", "Third" };
+
+        Object selectedValue = JOptionPane.showInputDialog(null,
+                    "Choose one", "Input",
+                    JOptionPane.INFORMATION_MESSAGE, null,
+                    possibleValues, possibleValues[0]);
 	}
 }
