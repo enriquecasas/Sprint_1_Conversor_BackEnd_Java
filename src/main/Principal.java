@@ -47,7 +47,22 @@ public static void main(String[] args) {
 
 			case "Conversor de Temperatura":
 				
-				// code here
+				valorInput = JOptionPane.showInputDialog("Ingresa el valor de la temperatura que deseas convertir ");
+	             if(ValidarNumeroInput(valorInput) == true) {
+	                 double Minput = Double.parseDouble(valorInput);
+	                 temperatura.ConvertirTemperatura(Minput);
+
+	                 respuesta = JOptionPane.showConfirmDialog(null, "¿Desea continuar?");
+	                 
+	                 if((respuesta == JOptionPane.OK_OPTION) && (ValidarNumeroInput(valorInput) == true)) { 
+	                	 
+	                 } else {
+	                     JOptionPane.showMessageDialog(null, "Programa terminado");                     
+	                 }
+
+	             } else {
+	                 JOptionPane.showMessageDialog(null, "Valor inválido");                
+	             }
 	             
 				break;
 				
